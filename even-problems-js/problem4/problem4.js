@@ -15,4 +15,24 @@ const isPalindrome = (n) => {
   return true;
 };
 
-module.exports.isPalindrome = isPalindrome;
+const largestPalindromicProduct = (n) => {
+  // Largest n digit number
+  const max = 10 ** n - 1;
+  // Smallest n digit number
+  const min = 10 ** (n - 1);
+
+  let maxProduct = 0;
+  for (let i = max; i >= min; i--) {
+    for (let j = i; j >= min; j--) {
+      let product = i * j;
+
+      if (isPalindrome(product) && product > maxProduct) {
+        maxProduct = product;
+      }
+    }
+  }
+
+  return maxProduct;
+};
+
+module.exports = { isPalindrome, largestPalindromicProduct };
