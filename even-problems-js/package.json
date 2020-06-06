@@ -1,0 +1,14 @@
+{
+  "name": "even-problems-js",
+  "version": "1.0.0",
+  "description": "Even numbered Project Euler Problems",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Brian Monaccio",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^26.0.1"
+  }
+}
